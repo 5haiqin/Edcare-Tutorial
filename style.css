@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar {
+    width: 2px;
+}
+/*===================================================
+                    Custom Fonts
+====================================================*/
+@font-face {
+    font-family: norwester;
+    src: url(./norwester.otf);
+}
+.home-page{
+    background: url(./Image/bg.svg) no-repeat;
+    display:block; 
+}
+
+/*====================================================================== 
+                            Nav Bar 
+=======================================================================*/
+.logo{
+    width: 30%;
+}
+.Mobile-Menu-section{
+    display: none;
+}
+.Menu-section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 2em 3em 0 4em ;
+}
+.Menu-section ul {
+    list-style: none;
+    display: flex;
+}
+.Menu-section ul li {   
+    padding-right: 24px;
+    text-align: center;  
+    position: relative;
+    top: 1.8em;
+}
+.Menu-section ul li a {
+    font-size: 24px;
+    font-family: 'Noto Sans';
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.Menu-section ul li a:hover {
+    border-bottom: 3px white solid;
+}
+/* dropdown menu style */
+.dropbox-menu {
+    display: none;
+}
+.Menu-section ul li:hover .dropbox-menu {
+    display: block;
+    position: absolute;
+    z-index: +1;
+    left: 0;
+    top: 2em;
+    height: 220px;
+    width: 150px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.47);
+    padding:3px 0 5px 30px;
+}
+.Menu-section ul li:hover .dropbox-menu ul {
+    display: block;
+}
+.Menu-section ul li:hover .dropbox-menu ul li {
+    padding: 0 5px 5px 0;
+    text-align: left;
+}
+.dropbox-menu-1 {
+    display: none;
+}
+/*===========Nav-bar Max-width:1150px============*/
+@media only screen and (max-width: 1150px) {
+.Menu-section {
+    display: none;
+}
+.menu-button>i{
+    padding-top: 20px;
+    font-size: 2em;
+}
+.Mobile-Menu-section{
+    display: block;
+    position: absolute;
+    z-index: +1;
+}
+.logo{
+    width: 50%;
+    padding-left:  1.6em ;
+    padding-top: 0.8em;
+}
+.Mobile-Menu-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-right:  1.5em ;
+}
+.Mobile-Menu-section ul {
+    list-style: none;
+}
+.Mobile-Menu-section ul li {
+    text-align: center; 
+    position: relative;
+    padding-left: 80px;
+    text-align: center; 
+}
+.Mobile-Menu-section ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #707bfb;
+    transition: all 0.3s;
+    font-family: Noto Sans;
+}
+/* dropdown menu style */
+.dropbox-menu {
+    display: none;
+}
+
+.Mobile-Menu-section ul li:hover .dropbox-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.Mobile-Menu-section ul li:hover .dropbox-menu ul {
+    display: block;
+}
+.Mobile-Menu-section ul li:hover .dropbox-menu ul {
+    padding:3px 10px 3px 10px;
+    background-color: rgba(255, 255, 255, 0.814);
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+.Mobile-Menu-section ul li:hover .dropbox-menu ul li{
+    padding: 10px;
+}
+}
+@media only screen and (max-width: 500px) {
+    .logo{
+    width: 55%; 
+    padding-left:  0.8em ;
+    padding-top: 0;
+}
+.menu-button>i{
+    padding-top: 20px;
+    font-size: 1.5em;
+}
+.Mobile-Menu-section ul li:hover .dropbox-menu ul {
+    padding:3px;
+}
+}
+
+/*==================================================
+    Landing Page or Home page with Responsive
+====================================================*/
+.home-element{
+    padding-bottom: 4em;
+}
+@media only screen and (max-width: 575px) {
+    .img-1{
+        display: none;
+    }
+    .img-2>img{
+        width: 80% !important ;
+        margin: 5% 10% 0 10% !important;
+    }
+    }
+    @media only screen and (max-width: 991px) {
+    .img-1{
+        display: none;
+    }
+    .img-2>img{
+        width: 30%;
+        margin: 0 35% 0 35%;
+    }
+    .homepage-message{
+        width: 90%;
+        margin:5% 5% 0 5%;
+        text-align: center;
+    }
+    .Head-line{
+        font-family: Alegreya Sans SC;
+        color: white;
+        line-height: 70%;
+        font-size: 2.3em;
+    }
+    .Sub-line{  
+        color: white;
+        font-family: 'Open Sans';
+        line-height: 18px  ;
+        font-size: 0.8em;
+    }
+    .Admission-button{
+        width: 120px;
+        border: none;
+        font-size: 1em;
+        border-radius: 50px;
+        padding: 10px 5px ;
+        background-color: white;
+        font-family: 'Open Sans';
+        color: #707bfb;
+    }
+    }
+    @media only screen and (max-width: 1184px) {
+    .img-1>img{
+        padding-top:15% ;
+    }
+    }
+    @media only screen and (min-width: 991px) {
+    .img-2{
+        display: none;
+    }
+    .img-1>img{
+        margin:5% 0 0 10% ;
+        width: 80%;
+    }
+    .homepage-message{
+        width: 80%;
+        margin: 10% 0 0 0%;
+    }
+    .Head-line{
+        font-family: Alegreya Sans SC;
+        color: white;
+        line-height: 60px;
+        font-size: 4.5em;
+    }
+    .Sub-line{
+        color: white;
+        font-family: 'Open Sans';
+        font-size: 1.1em;
+        padding: 8px  0 0 5px;
+        line-height: 22px;
+    }
+    .Admission-button{
+        width: 220px;
+        border: none;
+        font-size: 1.5em;
+        border-radius: 50px;
+        padding: 15px ;
+        background-color: white;
+        font-family: 'Open Sans';
+        color: #707bfb;
+    }
+    .Admission-button a{
+        text-decoration: none;
+    }
+    }
+.Admission-button:hover{
+        background-color: rgba(227, 215, 215, 0.893);
+}
+
+/*===================================================
+            Facilities Section with Responsive
+====================================================*/
+.Facilities-Head-line{
+        font-family:norwester ;
+        font-size: 400%;
+    }
+    .Facilities-Sub-line ul li{
+        font-size: 120%;
+        padding-top: 1%;
+    }
+    @media only screen and (max-width: 575px) {
+    .img-3>img{
+        width: 80% !important ;
+        margin: 0 10% 0 10% !important;
+    }
+    .Facilities-Head-line{
+        font-size: 300%;
+    }
+    }
+    @media only screen and (min-width: 991px) {
+    .img-3{
+        padding-left: 5%;
+    }
+    }
+    @media only screen and (max-width: 991px) {
+    .img-3>img{
+    width: 40%;
+        margin: 0 30% 0 30%;
+    }
+    .Facilities-Head-line{
+        font-size: 300%;
+    }
+    .Facilities-Sub-line ul li{
+        font-size: 100%;
+        padding-top: 1%;
+        text-align: left;
+    }
+    .Facilities-Sub-line ul{
+        padding-left: 5%;
+    }
+    .Facilities-message {
+        text-align: center;
+    }
+}
+/*===================================================
+            Gallery Section with Responsive
+====================================================*/
+.Gallery-Header{
+    font-family: norwester;
+    font-size: 400%;
+}
+.Image-gallery{
+    padding-top: 1.5em;
+}
+.Image-gallery img{
+    width: 25%;
+    border-radius: 25px;
+    margin: 10px;
+}
+.Image-gallery img:hover{
+    transform: scale(1.1);
+}
+.Quote-for-gallery{
+    font-size:  100%;
+    line-height: 1.1em;
+    padding: 0 15px 0 15px;
+}
+.Mobile-gallery{
+    display: none;
+}
+/*===================================================
+                    Subject Section 
+====================================================*/
+.Subject-header{
+    font-family: norwester;
+    font-size: 400%;
+}
+.Subject-section{
+    margin-top: 1em;
+    background-color: #707bfb;
+    overflow: hidden;
+    color: white;
+}
+.subject-icon  img{
+    width:80%;
+    border-radius: 25px;
+  }
+.subject-icon{
+    padding: 1em;
+}
+.wrapper{/*
+        max-height: 130px;/*
+        border: 1px solid grey;*/
+        display: flex;  
+        overflow-x: auto;
+    }
+    .wrapper::-webkit-scrollbar{
+        width:none;
+    }
+    .wrapper .item{
+        min-width: 110px;
+        line-height: 110px;
+        text-align: center;
+        margin-right: 2px;
+    }
+@media only screen and (max-width: 575px) {
+    .Gallery-Header{
+    font-size: 300%;
+}
+.Quote-for-gallery{
+    padding: 0 8px 5px 8px;
+}
+.Image-gallery{
+    display: none;
+}
+.Mobile-gallery{
+    display: block;
+    width: 100%;
+}
+.Subject-header{
+    font-size: 300%;
+    color: white;
+}
+.subject-icon  img{
+    width: 90%;
+    border-radius: 20px;
+    padding: 0.5%  ;
+    margin-bottom: 1.5em;
+}
+} 
+/*===================================================
+                    Message Section 
+====================================================*/
+    .About-Us-section center{
+        font-family: norwester;
+        font-size: 400%;
+    }
+    .about-us-logo>img{
+        width: 70%;
+        border-radius: 50px;
+        margin-left: 9em;
+    }
+    .about-us{
+        margin-top: 1.5em;
+    }
+    .start-q-icon{
+        width: 8%;
+        padding: 2em 0 0 2em;
+    }
+    
+    .end-q-icon{
+        width: 8%;
+        float: right;
+        padding:  0 2em 2em 0;
+    }
+    .about-us>p{
+        padding:  20px 50px 0 50px;
+        font-size: 1.5em;
+    }
+    
+    @media only screen and (max-width: 991px) {
+        .About-Us-section center{
+        font-size: 300%;
+        }
+        .about-us-logo>img{
+        width: 50%;
+        border-radius: 50px;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 0.8em;
+        }
+        .about-us{
+        margin-top: 0.5em;
+        }
+        .start-q-icon{
+        width: 15%;
+        padding: 1em 0 0 2em;
+        }
+        .end-q-icon{
+        width: 15%;
+        float: right;
+        padding:  0 2em 1em 0;
+        }
+        .about-us>p{
+        padding:  10px 50px 0 50px;
+        font-size: 1.1em;
+        text-align: center;
+        }
+    }
+    @media only screen and (min-width: 575px) {
+    
+        .start-q-icon{
+        width: 10%;
+        padding: 1em 0 0 2em;
+        }
+        .end-q-icon{
+        width: 10%;
+        float: right;
+        padding:  0 2em 1em 0;
+        }
+    }
+/*===================================================
+                    Instructor Section 
+====================================================*/
+    .instructor-head{
+        padding-top: 25px;
+        font-family: norwester;
+        font-size: 400%;
+    }
+    .instructor-img{
+        width: 50%;
+    }
+    .instructor-subline{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .instructor-subline>p{
+        padding:  20px 50px 0 50px;
+        font-size: 1.5em;
+        font-family: 'Open Sans';
+        text-align: center;
+    }
+    .start-q-int-icon{
+        width: 8%;
+        padding: 1em 0 0 2em;
+    }
+    .end-q-int-icon{
+        width: 8%;
+        float: right;
+        padding:  0 2em 1em 0;
+    }
+    .apply-teacher {
+        text-align: center;
+        padding: 15px;
+        background-color: #707bfb;
+        border-radius: 50px;
+        width: 300px;
+        margin: 0 auto 0 auto;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    .apply-teacher a{
+        color: white;
+        text-decoration: none;
+    }
+    .apply-teacher:hover{
+        background-color: #4f5ee8;
+    }
+    @media only screen and (max-width: 575px) {
+        .instructor-head{
+        font-size: 200%;
+        }
+        .instructor-img{
+        width: 80%;
+        }
+        .instructor-subline{
+        width: 95%;
+        margin-left: 2.5%;
+        }
+        .instructor-subline>p{
+        padding:  0px 50px 0 50px;
+        font-size: 1.1em;
+        text-align: center;
+        }
+        .start-q-int-icon{
+        width: 15%;
+        padding: 1em 0 0 2em;
+        }
+        .end-q-int-icon{
+        width: 15%;
+        float: right;
+        padding:  0 2em 1em 0;
+        }
+        .apply-teacher {
+        text-align: center;
+        padding: 10px;
+        background-color: #707bfb;
+        border-radius: 50px;
+        width: 200px;
+        margin: 0 auto 0 auto;
+        font-size: 1.1em;
+        text-decoration: none;
+        }
+    }
+/*===================================================
+                Review & Business hour Section 
+====================================================*/
+.review-section>img{
+    width: 100%;
+}
+.review-section-mobile>img{
+    width: 100%;
+}
+.meeting-logo{
+    width: 70%;
+    margin-left: 15%;
+}
+.meeting-head,
+.review-heading{
+    font-family: norwester;
+    font-size: 400%;
+    color: white;
+    padding-left: 25px;
+}
+.timing{
+    color: white;
+    font-size: 1.5em;
+    padding: 0 0 30px 45px;
+}
+tr{
+    padding: 2px;
+}
+td{
+    padding: 0 2px  0 2px;
+}
+.days{
+    padding-right: 8px;
+}
+.review-section{
+    margin-top: 15px;
+    width: 60%;
+}
+.review-section-mobile{
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    .meeting-head,
+    .review-heading{
+    font-family: norwester;
+    font-size: 200%;
+    color: white;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+.review-section-mobile{
+    display: block;
+    margin: 15px 0 30px 0;
+    width: 80%;
+}
+.review-section{
+    display: none;
+}
+.timing{
+    color: white;
+    font-size: 1em;
+    padding: 0 0 15px 15px;
+
+}
+.timing tr{
+    padding: 2px;
+}
+.timing td{
+    padding: 0 2px  0 2px;
+}
+.days{
+    padding-right: 8px;
+}
+}
+
+/*===================================================
+                Location & Contact Us Section 
+====================================================*/
+.location-heading,
+.message{
+    padding: 10px 10px 0 10px;
+font-family: norwester;
+font-size: 400%;
+color: white;
+}
+
+.address-location{
+    color: white;
+    margin: 70px 20px;
+    float: left;
+}
+.address-location td{
+    padding: 10px;
+    font-size: 1.2em;
+    line-height: 26px;
+    text-decoration: none;
+}
+#mail-in-location a{
+    color: white;
+    text-decoration: none;
+}
+#mail-in-location a:hover{
+    background-color: rgb(32, 200, 200);
+    padding: 10px;
+    border-radius: 25px;
+}
+.contact-message-for-mobile{
+display: none;
+}
+
+.message-subline{
+    font-size: 1.5em;
+}
+form {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    form * {
+        width: 100%;
+        margin-top: 8px;
+        border: none;
+        border-radius: 25px;
+        background-color: rgb(244, 241, 241);
+        padding: 30px;
+    }
+    .message-submit{
+        background-color: #707bfb;
+        width: 25%;
+        padding: 10px;
+        font-size: 1.5em;
+        border-radius: 50px;
+        margin-top: 20px;
+        color: white;
+    }
+@media only screen and (max-width: 991px) {
+.location-heading,
+.message{
+font-size: 250%;
+}
+.address-location{
+    margin: 10px 20px;
+    float: left;
+}
+.address-location td{
+    padding: 10px;
+    font-size: 1em;
+    line-height: 18px;
+    text-decoration: none;
+}
+.location-charater{
+    display: none;
+}
+.contact-message-for-mobile{
+display: block;
+
+}
+.contact-message-not-for-mobile{
+display: none;
+}
+.message-submit{
+        background-color: #707bfb;
+        width: 40%;
+        padding: 10px;
+        font-size: 1.1  em;
+        border-radius: 50px;
+        margin: 10px;
+        color: white;
+    }
+
+.message-subline{
+    font-size: 1.1em;
+}
+form {
+        width: 90%;
+    }
+    form * {
+        padding: 15px;
+    }
+}
+
+/*===================================================
+              footer Section 
+====================================================*/
+.social-heading{
+    padding: 10px 10px 0 10px;
+  font-family: norwester;
+  font-size: 400%;
+  color: black;
+  background-color: #ffffff00;
+  }
+  .social-icon img{
+    color: white;
+    padding: 0 1% 0 1%;
+    width: 6%;
+  }
+  .l-footer img{
+    float: left; 
+    width: 8%;
+  }
+  .r-footer img{
+    float: right;
+    width: 8%;
+  }
+  
+  @media only screen and (max-width: 991px) {
+  .social-heading{
+    padding: 5px 10px 0 10px;
+  font-size: 200%;
+  }
+  .social-icon img{
+    color: white;
+    padding: 0 1% 0 1%;
+    width: 10%;
+  }
+  footer{
+    display: inline-block;
+  }
+  .l-footer img{
+    float: left; 
+    width: 15%;
+  }
+  .r-footer img{
+    float: right;
+    width: 15%;
+  }
+  }
+
+/*=======================================
+            developer
+=========================================*/
+.developer {
+    margin-bottom: 0;
+    padding: 20px;
+}
+.developer a{
+    color: #4f5ee8;
+    text-decoration: none;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.developer a:hover{
+    border-bottom: 2px solid #4f5ee8;
+}
+@media only screen and (max-width:500px) {
+    .developer {
+        padding: 0px;
+    }
+    .developer a{
+        font-size: 0.8em;
+        padding: 0px;
+    }
+}
